@@ -1,0 +1,34 @@
+[user]
+    name = Steven Wong
+    email = stevenwong@theorigo.com
+[push]
+    default = simple
+
+[alias]
+    ll = log --graph --pretty=format:'%Cred%h%Creset %ad | %C(white)%s%Creset %C(yellow)%d%Creset %C(bold blue)[%an]%Creset' --date=short
+    la = log --graph --full-history --all --pretty=format:'%Cred%h%Creset %ad | %C(white)%s%Creset %C(yellow)%d%Creset %C(bold blue)[%an]%Creset' --date=short
+    co = checkout
+    ci = commit
+    st = status
+    br = branch -v
+    rt = reset --hard
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
+    l = log --pretty=oneline --abbrev-commit --graph --decorate
+    ls = log --pretty=oneline --abbrev-commit --graph --decorate --stat
+    amend = commit --amend
+    who = shortlog -n -s --no-merges
+    g = grep -n --color -E
+    cp = cherry-pick -x
+    nb = checkout -b
+
+    # 'git add -u' handles deleted files, but not new files
+    # 'git add .' handles any current and new files, but not deleted
+    # 'git addall' now handles all changes
+    addall = !sh -c 'git add . && git add -u'
+    
+    # Handy shortcuts for rebasing
+    rc = rebase --continue
+    rs = rebase --skip
+    ra = rebase --abort
+    
