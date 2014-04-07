@@ -10,7 +10,7 @@
     co = checkout
     ci = commit
     st = status
-    br = branch -v
+    br = branch -a -vv
     rt = reset --hard
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
